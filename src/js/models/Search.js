@@ -5,10 +5,10 @@ export default class Search {
 
   async getResults() {
     const key = 'b4ea110422367ae01f9de8c612462846';
-    const url = 'http://api.openweathermap.org/data/2.5/forecast?id=';
+    const url = 'http://api.openweathermap.org/data/2.5/forecast?q=';
 
     try {  
-      const response = await fetch(`${url}${this.query}&APPID=${key}`, { mode: 'cors' });
+      const response = await fetch(`${url}${this.query}&units=imperial&APPID=${key}`, { mode: 'cors' });
       const data = await response.json();
       // this.weather = data.list[0].weather[0].main;
       // this.temp = data.list[0].main.temp;
