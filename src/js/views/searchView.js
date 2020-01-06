@@ -7,19 +7,23 @@ export const clearInput = () => {
   searchInput.value = '';
 }
 
+export const clearContent = () => {
+  header.innerHTML = '';
+}
+
 export const renderResult = (city) => {
   const appHtml = `
-    <span class="city">
+    <span class="city ">
       ${city.name}
-      <i class="fa fa-map-marker"></i>
-      <span class="today">Today</span>
+      <i class="fa fa-map-marker "></i>
+      <span class="today ">Today</span>
       </span>
-      <span class="weather">
-      <span class="temp">
+      <span class="weather ">
+      <span class="temp ">
         ${city.main.temp}<sup>&deg;</sup>
-        <span class="unit">f</span>
+        <span class="unit ">f</span>
       </span>
-      <span class="wind-scale">
+      <span class="wind-scale ">
         <table>
           <tr>
             <td>Wind Direction</td>
