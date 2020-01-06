@@ -78,6 +78,12 @@ form:hover .fa {
   color: white;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .app {
   width: 360px;
   height: 400px;
