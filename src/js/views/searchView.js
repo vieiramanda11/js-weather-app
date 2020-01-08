@@ -16,13 +16,11 @@ export const renderResult = (city) => {
   const appHtml = `
     <span class="city ">
       ${getInput()}
-      <i class="fa fa-map-marker "></i>
       <span class="today ">Today</span>
       </span>
       <span class="weather ">
-      <span class="temp ">
+      <span class="temp">
         ${city.main.temp}<sup>&deg;</sup>
-        <span class="unit ">f</span>
       </span>
       <span class="wind-scale ">
         <table>
@@ -53,3 +51,4 @@ export const renderResult = (city) => {
 export const errorMessage = () => {
   header.innerText = `<h1>This city doesn't exist</h1>`
 }
+
