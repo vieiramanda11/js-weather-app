@@ -10,7 +10,7 @@ const controlSearch = async () => {
 
   if (query) {
     state.search = new Search(query);
-    await state.search.getResults();
+    await state.search.getResultsCelsius();
     console.log(state.search.result);
     
     searchView.clearContent();

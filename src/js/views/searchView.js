@@ -12,9 +12,10 @@ export const clearContent = () => {
 }
 
 export const renderResult = (city) => {
+  
   const appHtml = `
     <span class="city ">
-      ${city.name}
+      ${getInput()}
       <i class="fa fa-map-marker "></i>
       <span class="today ">Today</span>
       </span>
@@ -47,4 +48,8 @@ export const renderResult = (city) => {
     </span>
   `;
   header.insertAdjacentHTML('beforeend', appHtml);
+}
+
+export const errorMessage = () => {
+  header.innerText = `<h1>This city doesn't exist</h1>`
 }
