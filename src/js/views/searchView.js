@@ -1,5 +1,6 @@
 const searchInput = document.getElementById('search-input');
 const header = document.querySelector('.header');
+const errorText = document.getElementById('error-message');
 
 export const getInput = () => searchInput.value;
 
@@ -12,43 +13,23 @@ export const clearContent = () => {
 }
 
 export const renderResult = (city) => {
-  
+  const name;
+  name.textContent = searchInput.value;
   const appHtml = `
-    <span class="city ">
+    <span class="city">
       ${getInput()}
-      <span class="today ">Today</span>
-      </span>
-      <span class="weather ">
+      <span class="today">${city.weather[0].main}: ${city.weather[0].description}</span>
+    </span>
+    <span class="weather">
       <span class="temp">
         ${city.main.temp}<sup>&deg;</sup>
       </span>
-      <span class="wind-scale ">
-        <table>
-          <tr>
-            <td>Wind Direction</td>
-            <td>
-              <i class="wi wi-wind towards-45-deg"></i>
-            </td>
-          </tr>
-          <tr>
-            <td>Wind Scale</td>
-            <td>
-              <i class="wi wi-wind-beaufort-7"></i>
-            </td>
-          </tr>
-        </table>
-      </span>
-      <i class="wi wi-night-sleet"></i>
-      <span class="time">
-        <i class="wi wi-time-3"></i>
-      </span>
-      <span class="day">Monday</span>
     </span>
   `;
   header.insertAdjacentHTML('beforeend', appHtml);
 }
 
 export const errorMessage = () => {
-  header.innerText = `<h1>This city doesn't exist</h1>`
+  errorText.style.display = 'block';
 }
 
