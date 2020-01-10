@@ -13,16 +13,14 @@ export const clearContent = () => {
 }
 
 export const renderResult = (city) => {
-  const name;
-  name.textContent = searchInput.value;
   const appHtml = `
     <span class="city">
-      ${getInput()}
-      <span class="today">${city.weather[0].main}: ${city.weather[0].description}</span>
+      ${city.city.name}
+      <span class="today">${city.list[0].weather[0].main}: ${city.list[0].weather[0].description}</span>
     </span>
     <span class="weather">
       <span class="temp">
-        ${city.main.temp}<sup>&deg;</sup>
+        ${city.list[0].main.temp}<sup>&deg;</sup>
       </span>
     </span>
   `;

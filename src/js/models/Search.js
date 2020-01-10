@@ -13,7 +13,7 @@ export default class Search {
     const data = await response.json();
     try {
       if (`${response.status}` === '200') {
-        this.result = data.list[0];
+        this.result = data;
       } else {
         this.errorMessage();
       }
@@ -27,7 +27,7 @@ export default class Search {
     const data = await response.json();
     try {
       if (`${response.status}` === '200') {
-        this.result = data.list[0];
+        this.result = data;
       } else {
         this.errorMessage();
       }
