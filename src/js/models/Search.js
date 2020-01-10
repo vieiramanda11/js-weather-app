@@ -1,4 +1,4 @@
-import { errorMessage } from "../views/searchView";
+import { errorMessage } from '../views/searchView';
 
 export default class Search {
   constructor(query) {
@@ -9,7 +9,10 @@ export default class Search {
   }
 
   async getResultsFahrenheit() {
-    const response = await fetch(`${this.url}${this.query}&units=imperial&APPID=${this.key}`, { mode: 'cors' });
+    const response = await fetch(
+      `${this.url}${this.query}&units=imperial&APPID=${this.key}`,
+      { mode: 'cors' }
+    );
     const data = await response.json();
     try {
       if (`${response.status}` === '200') {
@@ -17,13 +20,16 @@ export default class Search {
       } else {
         this.errorMessage();
       }
-    } catch(error) {
+    } catch (error) {
       throw Error;
     }
   }
 
   async getResultsCelsius() {
-    const response = await fetch(`${this.url}${this.query}&units=metric&APPID=${this.key}`, { mode: 'cors' });
+    const response = await fetch(
+      `${this.url}${this.query}&units=metric&APPID=${this.key}`,
+      { mode: 'cors' }
+    );
     const data = await response.json();
     try {
       if (`${response.status}` === '200') {
@@ -31,8 +37,8 @@ export default class Search {
       } else {
         this.errorMessage();
       }
-    } catch(error) {
+    } catch (error) {
       throw Error;
     }
   }
-};
+}

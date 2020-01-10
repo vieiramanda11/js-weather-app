@@ -6,28 +6,27 @@ export const getInput = () => searchInput.value;
 
 export const clearInput = () => {
   searchInput.value = '';
-}
+};
 
 export const clearContent = () => {
   header.innerHTML = '';
-}
+};
 
-export const renderResult = (city) => {
+export const renderResult = city => {
   const appHtml = `
-    <span class="city">
+    <span class='city'>
       ${city.city.name}
-      <span class="today">${city.list[0].weather[0].main}: ${city.list[0].weather[0].description}</span>
+      <span class='today'>${city.list[0].weather[0].main}: ${city.list[0].weather[0].description}</span>
     </span>
-    <span class="weather">
-      <span class="temp">
+    <span class='weather'>
+      <span class='temp'>
         ${city.list[0].main.temp}<sup>&deg;</sup>
       </span>
     </span>
   `;
   header.insertAdjacentHTML('beforeend', appHtml);
-}
+};
 
 export const errorMessage = () => {
   errorText.style.display = 'block';
-}
-
+};

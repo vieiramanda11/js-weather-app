@@ -16,21 +16,21 @@ const controlSearch = async () => {
     searchView.clearContent();
     searchView.renderResult(state.search.result);
     searchView.clearInput();
-  } 
+  }
 };
 
 const controlSearchFahrenheit = async () => {
   await state.search.getResultsFahrenheit();
   searchView.clearContent();
   searchView.renderResult(state.search.result);
-} 
+}
 
 const controlSearchCelsius = async () => {
   await state.search.getResultsCelsius();
   searchView.clearContent();
   searchView.renderResult(state.search.result);
-} 
-  
+}
+
 const switchUnits = () => {
   if (toggleButton.firstChild.data === 'CHANGE TO CELSIUS') {
     controlSearchCelsius();
