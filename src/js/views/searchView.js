@@ -12,7 +12,7 @@ export const clearContent = () => {
   header.innerHTML = '';
 };
 
-export const renderResult = city => {
+export const renderResult = (city) => {
   const appHtml = `
     <span class='city'>
       ${city.city.name}

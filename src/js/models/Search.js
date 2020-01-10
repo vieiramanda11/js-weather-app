@@ -11,7 +11,7 @@ export default class Search {
   async getResultsFahrenheit() {
     const response = await fetch(
       `${this.url}${this.query}&units=imperial&APPID=${this.key}`,
-      { mode: 'cors' }
+      { mode: 'cors' },
     );
     const data = await response.json();
     try {
@@ -28,7 +28,7 @@ export default class Search {
   async getResultsCelsius() {
     const response = await fetch(
       `${this.url}${this.query}&units=metric&APPID=${this.key}`,
-      { mode: 'cors' }
+      { mode: 'cors' },
     );
     const data = await response.json();
     try {

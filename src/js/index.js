@@ -3,7 +3,7 @@ import * as searchView from './views/searchView';
 
 const searchForm = document.getElementById('search-form');
 const toggleButton = document.getElementById('toggle');
-const state = {}
+const state = {};
 
 const controlSearch = async () => {
   const query = searchView.getInput();
@@ -23,13 +23,13 @@ const controlSearchFahrenheit = async () => {
   await state.search.getResultsFahrenheit();
   searchView.clearContent();
   searchView.renderResult(state.search.result);
-}
+};
 
 const controlSearchCelsius = async () => {
   await state.search.getResultsCelsius();
   searchView.clearContent();
   searchView.renderResult(state.search.result);
-}
+};
 
 const switchUnits = () => {
   if (toggleButton.firstChild.data === 'CHANGE TO CELSIUS') {
@@ -38,9 +38,8 @@ const switchUnits = () => {
   } else {
     controlSearchFahrenheit();
     toggleButton.textContent = 'CHANGE TO CELSIUS';
-
   }
-}
+};
 
 searchForm.addEventListener('submit', (event) => {
   event.preventDefault();
