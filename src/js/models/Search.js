@@ -4,7 +4,7 @@ export default class Search {
   constructor(query) {
     this.query = query;
     this.key = 'b4ea110422367ae01f9de8c612462846';
-    this.url = 'http://api.openweathermap.org/data/2.5/forecast?q=';
+    this.url = 'https://api.openweathermap.org/data/2.5/forecast?q=';
     this.errorMessage = errorMessage();
   }
 
