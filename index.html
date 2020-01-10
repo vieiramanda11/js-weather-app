@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../src/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <title>Weather App</title>
-</head>
-<body>
-  <div class="container">
-    <form id="search-form">
-      <input type="search" placeholder="Choose a city" id="search-input">
-      <button><i class="fa fa-search"></i></button>
-    </form>
-    <div class="app">
-      <div class="header">
-        <div id="error-message">
-          <p>Please type a valid city.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="search-form">
+        <input type="search" placeholder="Choose a city" id="search-input" />
+        <button><i class="fa fa-search"></i></button>
+      </form>
+      <div class="app">
+        <div class="header">
+          <div id="error-message">
+            <p>Please type a valid city.</p>
+          </div>
         </div>
-      </div>
         <button type="button" id="toggle"></button>
+      </div>
     </div>
-  </div>
-  <script src="main.js"></script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
